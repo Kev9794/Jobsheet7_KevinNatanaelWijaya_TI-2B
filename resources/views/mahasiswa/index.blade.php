@@ -11,6 +11,17 @@
     </div>
 </div>
 
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form action="{{ route('cari') }}" method="GET">
+            <div class="input-group mb-3">
+                <input class="form-control" type="text" name="cari" placeholder="Masukkan nama yang dicari" value="{{ request('cari') }}" aria-describedby="button-addon2">
+                <input type="submit" class="btn btn-info" style="display: inline;" value="Cari">
+            </div>
+        </form>
+    </div>
+</div>
+
 @if ($message = Session::get('success'))
 <div class="alert alert-success">
     <p>{{ $message }}</p>
